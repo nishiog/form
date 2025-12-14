@@ -13,6 +13,12 @@
   - トラブルシューティング
   - 詳細な解説
 
+- **[Power Automate連携ガイド](power-automate-setup.md)** 🔥 推奨
+  - Microsoft Power Automateとの連携手順
+  - Webhook URLの取得方法
+  - SharePoint/Teams/Outlookとの統合例
+  - CORSの心配不要（HTMLを直接開いてOK）
+
 - **[クイックスタートガイド](quick-start.md)**
   - 3ステップで始める
   - 最小限の設定で使用開始

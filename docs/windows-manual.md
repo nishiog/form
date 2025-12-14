@@ -91,10 +91,21 @@ form-builder/
 
 | 項目 | 説明 | 例 |
 |------|------|-----|
-| `post_url` | 送信先のAPI URL | `https://api.example.com/documents` |
+| `post_url` | 送信先のAPI URL | Power AutomateのWebhook URL（非常に長いURLです） |
 | `method` | HTTPメソッド | `POST` |
-| `secret_key` | API認証用のキー | システム管理者から提供されたキー |
+| `secret_key` | API認証用のキー | 任意の文字列（Power Automate側で検証） |
 | `enable_console_log` | デバッグログの有効化 | `true` または `false` |
+
+### Power Automateを使用する場合（推奨）
+
+このフォームは **Microsoft Power Automate** との連携を想定しています。
+
+**メリット**:
+- ✅ CORSの問題なし（HTMLファイルをダブルクリックで開いても送信できる）
+- ✅ Office 365との連携が簡単（SharePoint、Teams、Outlookなど）
+- ✅ 追加のサーバー構築が不要
+
+詳細は **[Power Automate連携ガイド](power-automate-setup.md)** を参照してください。
 
 ## 🚀 使い方
 
@@ -205,6 +216,23 @@ form-builder.exe
 - [ ] `secret_key` が正しく設定されているか
 - [ ] インターネット接続があるか
 - [ ] APIサーバーが稼働しているか
+
+### CORSエラーが発生する
+
+**症状**: ブラウザのコンソールに「CORS policy」や「Access-Control-Allow-Origin」のエラーが表示される
+
+**原因**: HTMLファイルを直接開いている（`file://`プロトコル）場合、ブラウザのセキュリティ制限によりAPIへのリクエストがブロックされます。
+
+**解決方法**:
+1. **ローカルHTTPサーバーで開く**（推奨）
+   ```cmd
+   cd C:\form-builder\output
+   python -m http.server 8000
+   ```
+   ブラウザで `http://localhost:8000/index.html` を開く
+
+2. **APIサーバー側でCORS設定を行う**
+   - APIサーバーの管理者に連絡してCORS設定を依頼
 
 ## 🔐 セキュリティに関する注意
 

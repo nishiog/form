@@ -9,10 +9,14 @@ assetsフォルダ内のJSONデータからHTMLフォームを自動生成する
 
 ## 📚 ドキュメント
 
+### 利用者向け
 - [Windows利用者向けマニュアル](docs/windows-manual.md) - Windows環境での使い方
+- [Power Automate連携ガイド](docs/power-automate-setup.md) - 🔥 推奨: Microsoft Power Automateとの連携
 - [クイックスタートガイド](docs/quick-start.md) - 3ステップで始める
 - [配布パッケージ説明書](docs/README-DISTRIBUTION.md) - パッケージの内容
-- [リリースプロセス](docs/release-process.md) - 開発者向けリリース手順
+
+### 開発者向け
+- [リリースプロセス](docs/release-process.md) - リリース手順
 - [ドキュメント一覧](docs/README.md) - すべてのドキュメント
 
 ## ファイル構成

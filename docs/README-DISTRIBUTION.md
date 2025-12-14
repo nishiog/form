@@ -49,15 +49,37 @@ form-builder-windows/
 
 1. `assets/config.json.example` を `assets/config.json` にコピー
 2. メモ帳で開いて以下を編集：
-   ```json
-   {
-     "api": {
-       "post_url": "https://your-api-server.com/submit",
-       "secret_key": "your-secret-key-here"
-     }
-   }
-   ```
 
+#### Power Automateを使用する場合（推奨）
+
+```json
+{
+  "api": {
+    "post_url": "https://prod-XX.japaneast.logic.azure.com:443/workflows/.../triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=XXXXX",
+    "secret_key": "your-secret-key-here"
+  }
+}
+```
+
+**メリット**:
+- ✅ HTMLファイルを直接開いても送信できる（CORSの心配なし）
+- ✅ SharePoint/Teams/Outlookと簡単に連携
+- ✅ 追加のサーバー構築不要
+
+詳細: `docs/power-automate-setup.md`
+
+#### その他のAPIサーバーを使用する場合
+
+```json
+{
+  "api": {
+    "post_url": "https://your-api-server.com/submit",
+    "secret_key": "your-secret-key-here"
+  }
+}
+```
+
+注意: CORS設定が必要な場合があります。
 ### フォームの生成
 
 1. `form-builder.exe` をダブルクリック
