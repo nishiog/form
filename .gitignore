@@ -1,0 +1,52 @@
+# 生成されたHTMLファイル
+output/
+
+# 設定ファイル（機密情報を含む可能性がある）
+# 本番環境のシークレットキーを保護するため
+assets/config.json
+
+# ビルド成果物
+form-builder
+form-builder.exe
+package/
+*.zip
+
+# Goのビルド成果物
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# エディタ・IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ログファイル
+*.log
+
+# 一時ファイル
+tmp/
+temp/
+*.tmp
+
+# Node.js (もし将来使う場合)
+node_modules/
+
+# その他
+.env
+.env.local
+

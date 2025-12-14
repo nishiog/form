@@ -1,0 +1,409 @@
+[
+  {
+    "document_id": "minutes_regular_meeting",
+    "field_ids": [
+      "company_name",
+      "preparation_date",
+      "head_office_address",
+      "meeting_date",
+      "meeting_time",
+      "meeting_place",
+      "representative_director_name",
+      "director_name",
+      "statutory_auditor_name",
+      "fiscal_year_start",
+      "fiscal_year_end",
+      "attending_shareholders",
+      "attending_shares",
+      "agenda_items",
+      "resolution_details"
+    ]
+  },
+  {
+    "document_id": "minutes_extraordinary_meeting",
+    "field_ids": [
+      "company_name",
+      "preparation_date",
+      "head_office_address",
+      "meeting_date",
+      "meeting_time",
+      "meeting_place",
+      "representative_director_name",
+      "director_name",
+      "attending_shareholders",
+      "attending_shares",
+      "agenda_items",
+      "resolution_details"
+    ]
+  },
+  {
+    "document_id": "minutes_board_meeting",
+    "field_ids": [
+      "company_name",
+      "preparation_date",
+      "meeting_date",
+      "meeting_time",
+      "meeting_place",
+      "representative_director_name",
+      "director_name",
+      "resolution_details"
+    ]
+  },
+  {
+    "document_id": "resolution_shareholders",
+    "field_ids": [
+      "company_name",
+      "preparation_date",
+      "meeting_date",
+      "shareholder_company_name",
+      "shareholder_representative_name",
+      "shareholder_representative_title",
+      "resolution_details"
+    ]
+  },
+  {
+    "document_id": "resolution_board",
+    "field_ids": [
+      "company_name",
+      "preparation_date",
+      "meeting_date",
+      "representative_director_name",
+      "resolution_details"
+    ]
+  },
+  {
+    "document_id": "notice_shareholders_meeting",
+    "field_ids": [
+      "company_name",
+      "preparation_date",
+      "head_office_address",
+      "meeting_date",
+      "meeting_time",
+      "meeting_place",
+      "agenda_items"
+    ]
+  },
+  {
+    "document_id": "certificate_registration",
+    "field_ids": [
+      "company_name",
+      "head_office_address",
+      "corporate_number",
+      "establishment_date",
+      "capital_amount",
+      "certificate_issue_date"
+    ]
+  },
+  {
+    "document_id": "articles_incorporation",
+    "field_ids": [
+      "company_name",
+      "head_office_address",
+      "preparation_date",
+      "purpose_of_business",
+      "capital_amount",
+      "issued_shares",
+      "authorized_shares"
+    ]
+  },
+  {
+    "document_id": "power_attorney",
+    "field_ids": [
+      "company_name",
+      "representative_director_name",
+      "preparation_date",
+      "attorney_name",
+      "attorney_address"
+    ]
+  },
+  {
+    "document_id": "consent_all_members",
+    "field_ids": [
+      "company_name",
+      "preparation_date",
+      "member_name",
+      "resolution_details"
+    ]
+  },
+  {
+    "document_id": "director_resignation_letter",
+    "field_ids": [
+      "company_name",
+      "director_name",
+      "director_resignation_date",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "director_acceptance_letter",
+    "field_ids": [
+      "company_name",
+      "director_name",
+      "director_appointment_date",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "representative_director_acceptance_letter",
+    "field_ids": [
+      "company_name",
+      "representative_director_name",
+      "representative_director_appointment_date",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "auditor_resignation_letter",
+    "field_ids": [
+      "company_name",
+      "statutory_auditor_name",
+      "auditor_resignation_date",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "auditor_acceptance_letter",
+    "field_ids": [
+      "company_name",
+      "statutory_auditor_name",
+      "auditor_appointment_date",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "seal_certificate",
+    "field_ids": [
+      "representative_director_name",
+      "head_office_address",
+      "seal_impression_date"
+    ]
+  },
+  {
+    "document_id": "residence_certificate",
+    "field_ids": [
+      "director_name",
+      "head_office_address",
+      "certificate_issue_date"
+    ]
+  },
+  {
+    "document_id": "capital_increase_report",
+    "field_ids": [
+      "company_name",
+      "capital_increase_amount",
+      "new_shares_issued",
+      "payment_date",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "payment_certificate",
+    "field_ids": [
+      "company_name",
+      "capital_increase_amount",
+      "new_shares_issued",
+      "payment_date",
+      "representative_director_name",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "bank_deposit_certificate",
+    "field_ids": [
+      "company_name",
+      "capital_increase_amount",
+      "payment_date",
+      "certificate_issue_date"
+    ]
+  },
+  {
+    "document_id": "subscription_agreement",
+    "field_ids": [
+      "company_name",
+      "subscriber_name",
+      "subscriber_address",
+      "new_shares_issued",
+      "share_price",
+      "payment_deadline",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "dividend_resolution",
+    "field_ids": [
+      "company_name",
+      "meeting_date",
+      "dividend_amount_per_share",
+      "dividend_record_date",
+      "dividend_payment_date",
+      "total_dividend_amount",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "financial_statements",
+    "field_ids": [
+      "company_name",
+      "fiscal_year_start",
+      "fiscal_year_end",
+      "capital_amount",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "business_report",
+    "field_ids": [
+      "company_name",
+      "fiscal_year_start",
+      "fiscal_year_end",
+      "representative_director_name",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "audit_report",
+    "field_ids": [
+      "company_name",
+      "statutory_auditor_name",
+      "fiscal_year_start",
+      "fiscal_year_end",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "amended_articles",
+    "field_ids": [
+      "company_name",
+      "head_office_address",
+      "purpose_of_business",
+      "capital_amount",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "shareholders_list",
+    "field_ids": [
+      "company_name",
+      "shareholder_company_name",
+      "shareholder_address",
+      "issued_shares",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "registered_seal_card",
+    "field_ids": [
+      "company_name",
+      "representative_director_name",
+      "head_office_address",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "establishment_certificate",
+    "field_ids": [
+      "company_name",
+      "head_office_address",
+      "establishment_date",
+      "capital_amount",
+      "purpose_of_business",
+      "representative_director_name",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "promoter_signature",
+    "field_ids": [
+      "company_name",
+      "subscriber_name",
+      "subscriber_address",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "liquidation_report",
+    "field_ids": [
+      "company_name",
+      "liquidator_name",
+      "liquidation_start_date",
+      "liquidation_end_date",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "liquidation_balance_sheet",
+    "field_ids": [
+      "company_name",
+      "liquidation_end_date",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "creditor_notice",
+    "field_ids": [
+      "company_name",
+      "head_office_address",
+      "capital_decrease_amount",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "capital_decrease_notice",
+    "field_ids": [
+      "company_name",
+      "capital_decrease_amount",
+      "certificate_issue_date"
+    ]
+  },
+  {
+    "document_id": "foreign_company_certificate",
+    "field_ids": [
+      "foreign_company_name",
+      "country_of_origin",
+      "certificate_issue_date"
+    ]
+  },
+  {
+    "document_id": "foreign_company_articles",
+    "field_ids": [
+      "foreign_company_name",
+      "country_of_origin",
+      "purpose_of_business"
+    ]
+  },
+  {
+    "document_id": "japan_representative_appointment",
+    "field_ids": [
+      "foreign_company_name",
+      "japan_representative_name",
+      "branch_office_address",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "business_report_llc",
+    "field_ids": [
+      "company_name",
+      "business_executor_name",
+      "preparation_date",
+      "resolution_details"
+    ]
+  },
+  {
+    "document_id": "member_resignation_llc",
+    "field_ids": [
+      "company_name",
+      "member_name",
+      "preparation_date"
+    ]
+  },
+  {
+    "document_id": "member_join_llc",
+    "field_ids": [
+      "company_name",
+      "member_name",
+      "preparation_date"
+    ]
+  }
+]
+

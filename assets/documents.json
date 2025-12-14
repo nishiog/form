@@ -1,0 +1,203 @@
+[
+  {
+    "id": "minutes_regular_meeting",
+    "name_ja": "定時株主総会議事録",
+    "name_en": "Minutes of Regular Shareholders' Meeting"
+  },
+  {
+    "id": "minutes_extraordinary_meeting",
+    "name_ja": "臨時株主総会議事録",
+    "name_en": "Minutes of Extraordinary Shareholders' Meeting"
+  },
+  {
+    "id": "minutes_board_meeting",
+    "name_ja": "取締役会議事録",
+    "name_en": "Minutes of Board of Directors Meeting"
+  },
+  {
+    "id": "resolution_shareholders",
+    "name_ja": "株主総会決議書",
+    "name_en": "Resolution of Shareholders' Meeting"
+  },
+  {
+    "id": "resolution_board",
+    "name_ja": "取締役会決議書",
+    "name_en": "Resolution of Board of Directors"
+  },
+  {
+    "id": "notice_shareholders_meeting",
+    "name_ja": "株主総会招集通知",
+    "name_en": "Notice of Shareholders' Meeting"
+  },
+  {
+    "id": "certificate_registration",
+    "name_ja": "登記事項証明書",
+    "name_en": "Certificate of Registration"
+  },
+  {
+    "id": "articles_incorporation",
+    "name_ja": "定款",
+    "name_en": "Articles of Incorporation"
+  },
+  {
+    "id": "power_attorney",
+    "name_ja": "委任状",
+    "name_en": "Power of Attorney"
+  },
+  {
+    "id": "consent_all_members",
+    "name_ja": "総社員の同意書",
+    "name_en": "Consent of All Members"
+  },
+  {
+    "id": "director_resignation_letter",
+    "name_ja": "取締役辞任届",
+    "name_en": "Director's Resignation Letter"
+  },
+  {
+    "id": "director_acceptance_letter",
+    "name_ja": "取締役就任承諾書",
+    "name_en": "Director's Acceptance of Appointment"
+  },
+  {
+    "id": "representative_director_acceptance_letter",
+    "name_ja": "代表取締役就任承諾書",
+    "name_en": "Representative Director's Acceptance of Appointment"
+  },
+  {
+    "id": "auditor_resignation_letter",
+    "name_ja": "監査役辞任届",
+    "name_en": "Auditor's Resignation Letter"
+  },
+  {
+    "id": "auditor_acceptance_letter",
+    "name_ja": "監査役就任承諾書",
+    "name_en": "Auditor's Acceptance of Appointment"
+  },
+  {
+    "id": "seal_certificate",
+    "name_ja": "印鑑証明書",
+    "name_en": "Seal Impression Certificate"
+  },
+  {
+    "id": "residence_certificate",
+    "name_ja": "住民票",
+    "name_en": "Certificate of Residence"
+  },
+  {
+    "id": "capital_increase_report",
+    "name_ja": "資本金の額の計上に関する証明書",
+    "name_en": "Certificate of Capital Increase"
+  },
+  {
+    "id": "payment_certificate",
+    "name_ja": "払込証明書",
+    "name_en": "Certificate of Payment"
+  },
+  {
+    "id": "bank_deposit_certificate",
+    "name_ja": "金融機関の払込金保管証明書",
+    "name_en": "Bank Deposit Certificate"
+  },
+  {
+    "id": "subscription_agreement",
+    "name_ja": "株式引受契約書",
+    "name_en": "Share Subscription Agreement"
+  },
+  {
+    "id": "dividend_resolution",
+    "name_ja": "配当決議書",
+    "name_en": "Dividend Resolution"
+  },
+  {
+    "id": "financial_statements",
+    "name_ja": "計算書類",
+    "name_en": "Financial Statements"
+  },
+  {
+    "id": "business_report",
+    "name_ja": "事業報告",
+    "name_en": "Business Report"
+  },
+  {
+    "id": "audit_report",
+    "name_ja": "監査報告書",
+    "name_en": "Audit Report"
+  },
+  {
+    "id": "amended_articles",
+    "name_ja": "変更後の定款",
+    "name_en": "Amended Articles of Incorporation"
+  },
+  {
+    "id": "shareholders_list",
+    "name_ja": "株主名簿",
+    "name_en": "Shareholders' Registry"
+  },
+  {
+    "id": "registered_seal_card",
+    "name_ja": "印鑑届出書",
+    "name_en": "Registered Seal Card"
+  },
+  {
+    "id": "establishment_certificate",
+    "name_ja": "設立登記申請書",
+    "name_en": "Application for Incorporation Registration"
+  },
+  {
+    "id": "promoter_signature",
+    "name_ja": "発起人の同意書",
+    "name_en": "Promoters' Consent"
+  },
+  {
+    "id": "liquidation_report",
+    "name_ja": "清算事務報告書",
+    "name_en": "Liquidation Report"
+  },
+  {
+    "id": "liquidation_balance_sheet",
+    "name_ja": "清算貸借対照表",
+    "name_en": "Liquidation Balance Sheet"
+  },
+  {
+    "id": "creditor_notice",
+    "name_ja": "債権者保護手続に関する書面",
+    "name_en": "Notice to Creditors"
+  },
+  {
+    "id": "capital_decrease_notice",
+    "name_ja": "減資公告の証明書",
+    "name_en": "Certificate of Capital Decrease Notice"
+  },
+  {
+    "id": "foreign_company_certificate",
+    "name_ja": "外国会社の登記事項証明書",
+    "name_en": "Foreign Company Registration Certificate"
+  },
+  {
+    "id": "foreign_company_articles",
+    "name_ja": "外国会社の定款",
+    "name_en": "Foreign Company's Articles"
+  },
+  {
+    "id": "japan_representative_appointment",
+    "name_ja": "日本における代表者の選任に関する書面",
+    "name_en": "Appointment of Representative in Japan"
+  },
+  {
+    "id": "business_report_llc",
+    "name_ja": "合同会社の業務執行社員の同意書",
+    "name_en": "Consent of Executive Members of LLC"
+  },
+  {
+    "id": "member_resignation_llc",
+    "name_ja": "社員退社届",
+    "name_en": "Member's Resignation Letter (LLC)"
+  },
+  {
+    "id": "member_join_llc",
+    "name_ja": "社員加入承諾書",
+    "name_en": "Member's Acceptance of Admission (LLC)"
+  }
+]
+

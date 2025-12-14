@@ -1,0 +1,587 @@
+[
+  {
+    "id": "company_name",
+    "label_ja": "会社名",
+    "label_en": "Company Name",
+    "type": "text",
+    "required": false,
+    "sample": "株式会社サンプル",
+    "priority": 100
+  },
+  {
+    "id": "preparation_date",
+    "label_ja": "作成日",
+    "label_en": "Date of Preparation",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 95
+  },
+  {
+    "id": "head_office_address",
+    "label_ja": "本店所在地",
+    "label_en": "Address of Head Office",
+    "type": "text",
+    "required": false,
+    "sample": "東京都千代田区丸の内一丁目1番1号",
+    "priority": 90
+  },
+  {
+    "id": "representative_director_name",
+    "label_ja": "代表取締役氏名",
+    "label_en": "Name of Representative Director",
+    "type": "text",
+    "required": false,
+    "sample": "山田太郎",
+    "priority": 85
+  },
+  {
+    "id": "director_name",
+    "label_ja": "取締役氏名",
+    "label_en": "Name of Director",
+    "type": "text",
+    "required": false,
+    "sample": "佐藤次郎",
+    "priority": 55
+  },
+  {
+    "id": "statutory_auditor_name",
+    "label_ja": "監査役氏名",
+    "label_en": "Name of Statutory Auditor",
+    "type": "text",
+    "required": false,
+    "sample": "鈴木三郎",
+    "priority": 50
+  },
+  {
+    "id": "fiscal_year_start",
+    "label_ja": "事業年度開始日",
+    "label_en": "Start Date of the Fiscal Year",
+    "type": "date",
+    "required": false,
+    "sample": "2024-04-01",
+    "priority": 65
+  },
+  {
+    "id": "fiscal_year_end",
+    "label_ja": "事業年度終了日",
+    "label_en": "End Date of the Fiscal Year",
+    "type": "date",
+    "required": false,
+    "sample": "2025-03-31",
+    "priority": 60
+  },
+  {
+    "id": "shareholder_address",
+    "label_ja": "株主本店所在地",
+    "label_en": "Address of Head Office of the Shareholder",
+    "type": "text",
+    "required": false,
+    "sample": "東京都千代田区丸の内一丁目1番1号",
+    "priority": 10
+  },
+  {
+    "id": "shareholder_company_name",
+    "label_ja": "株主会社名",
+    "label_en": "Company Name of the Shareholder",
+    "type": "text",
+    "required": false,
+    "sample": "株式会社サンプル",
+    "priority": 10
+  },
+  {
+    "id": "shareholder_representative_name",
+    "label_ja": "株主代表者氏名",
+    "label_en": "Name of the Representative of the Shareholder",
+    "type": "text",
+    "required": false,
+    "sample": "山田太郎",
+    "priority": 10
+  },
+  {
+    "id": "shareholder_representative_title",
+    "label_ja": "株主代表者役職",
+    "label_en": "Title of the Representative of the Shareholder",
+    "type": "text",
+    "required": false,
+    "sample": "代表取締役",
+    "priority": 10
+  },
+  {
+    "id": "corporate_number",
+    "label_ja": "法人番号",
+    "label_en": "Corporate Number",
+    "type": "text",
+    "required": false,
+    "sample": "0123456789012",
+    "priority": 10
+  },
+  {
+    "id": "establishment_date",
+    "label_ja": "設立年月日",
+    "label_en": "Date of Establishment",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "capital_amount",
+    "label_ja": "資本金の額",
+    "label_en": "Amount of Capital",
+    "type": "number",
+    "required": false,
+    "sample": "1000000",
+    "priority": 10
+  },
+  {
+    "id": "issued_shares",
+    "label_ja": "発行済株式総数",
+    "label_en": "Total Number of Issued Shares",
+    "type": "number",
+    "required": false,
+    "sample": "1000000",
+    "priority": 10
+  },
+  {
+    "id": "authorized_shares",
+    "label_ja": "発行可能株式総数",
+    "label_en": "Total Number of Authorized Shares",
+    "type": "number",
+    "required": false,
+    "sample": "1000000",
+    "priority": 10
+  },
+  {
+    "id": "director_appointment_date",
+    "label_ja": "取締役就任年月日",
+    "label_en": "Date of Director Appointment",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "director_resignation_date",
+    "label_ja": "取締役退任年月日",
+    "label_en": "Date of Director Resignation",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "representative_director_appointment_date",
+    "label_ja": "代表取締役就任年月日",
+    "label_en": "Date of Representative Director Appointment",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "representative_director_resignation_date",
+    "label_ja": "代表取締役退任年月日",
+    "label_en": "Date of Representative Director Resignation",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "auditor_appointment_date",
+    "label_ja": "監査役就任年月日",
+    "label_en": "Date of Auditor Appointment",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "auditor_resignation_date",
+    "label_ja": "監査役退任年月日",
+    "label_en": "Date of Auditor Resignation",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "meeting_date",
+    "label_ja": "総会開催日",
+    "label_en": "Date of Meeting",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 80
+  },
+  {
+    "id": "meeting_time",
+    "label_ja": "総会開催時刻",
+    "label_en": "Time of Meeting",
+    "type": "text",
+    "required": false,
+    "sample": "サンプルテキスト",
+    "priority": 75
+  },
+  {
+    "id": "meeting_place",
+    "label_ja": "総会開催場所",
+    "label_en": "Place of Meeting",
+    "type": "text",
+    "required": false,
+    "sample": "サンプルテキスト",
+    "priority": 70
+  },
+  {
+    "id": "agenda_items",
+    "label_ja": "議題",
+    "label_en": "Agenda Items",
+    "type": "textarea",
+    "required": false,
+    "sample": "ここにサンプルの詳細な説明文を入力してください。\n複数行の入力が可能です。",
+    "priority": 45
+  },
+  {
+    "id": "resolution_details",
+    "label_ja": "決議事項",
+    "label_en": "Resolution Details",
+    "type": "textarea",
+    "required": false,
+    "sample": "ここにサンプルの詳細な説明文を入力してください。\n複数行の入力が可能です。",
+    "priority": 40
+  },
+  {
+    "id": "attending_shareholders",
+    "label_ja": "出席株主数",
+    "label_en": "Number of Attending Shareholders",
+    "type": "number",
+    "required": false,
+    "sample": "1000000",
+    "priority": 10
+  },
+  {
+    "id": "attending_shares",
+    "label_ja": "出席株式数",
+    "label_en": "Number of Attending Shares",
+    "type": "number",
+    "required": false,
+    "sample": "1000000",
+    "priority": 10
+  },
+  {
+    "id": "voting_rights",
+    "label_ja": "議決権数",
+    "label_en": "Number of Voting Rights",
+    "type": "number",
+    "required": false,
+    "sample": "1000000",
+    "priority": 10
+  },
+  {
+    "id": "dividend_amount_per_share",
+    "label_ja": "1株当たりの配当金額",
+    "label_en": "Dividend Amount per Share",
+    "type": "number",
+    "required": false,
+    "sample": "1000000",
+    "priority": 10
+  },
+  {
+    "id": "dividend_record_date",
+    "label_ja": "配当基準日",
+    "label_en": "Dividend Record Date",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "dividend_payment_date",
+    "label_ja": "配当支払日",
+    "label_en": "Dividend Payment Date",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "total_dividend_amount",
+    "label_ja": "配当総額",
+    "label_en": "Total Dividend Amount",
+    "type": "number",
+    "required": false,
+    "sample": "1000000",
+    "priority": 10
+  },
+  {
+    "id": "capital_increase_amount",
+    "label_ja": "増資額",
+    "label_en": "Capital Increase Amount",
+    "type": "number",
+    "required": false,
+    "sample": "1000000",
+    "priority": 10
+  },
+  {
+    "id": "capital_decrease_amount",
+    "label_ja": "減資額",
+    "label_en": "Capital Decrease Amount",
+    "type": "number",
+    "required": false,
+    "sample": "1000000",
+    "priority": 10
+  },
+  {
+    "id": "new_shares_issued",
+    "label_ja": "新株発行数",
+    "label_en": "Number of New Shares Issued",
+    "type": "number",
+    "required": false,
+    "sample": "1000000",
+    "priority": 10
+  },
+  {
+    "id": "share_price",
+    "label_ja": "1株の払込金額",
+    "label_en": "Payment Amount per Share",
+    "type": "number",
+    "required": false,
+    "sample": "1000000",
+    "priority": 10
+  },
+  {
+    "id": "payment_deadline",
+    "label_ja": "払込期日",
+    "label_en": "Payment Deadline",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "payment_date",
+    "label_ja": "払込日",
+    "label_en": "Payment Date",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "subscriber_name",
+    "label_ja": "引受人氏名",
+    "label_en": "Name of Subscriber",
+    "type": "text",
+    "required": false,
+    "sample": "山田太郎",
+    "priority": 10
+  },
+  {
+    "id": "subscriber_address",
+    "label_ja": "引受人住所",
+    "label_en": "Address of Subscriber",
+    "type": "text",
+    "required": false,
+    "sample": "東京都千代田区丸の内一丁目1番1号",
+    "priority": 10
+  },
+  {
+    "id": "old_company_name",
+    "label_ja": "旧会社名",
+    "label_en": "Former Company Name",
+    "type": "text",
+    "required": false,
+    "sample": "株式会社サンプル",
+    "priority": 10
+  },
+  {
+    "id": "new_company_name",
+    "label_ja": "新会社名",
+    "label_en": "New Company Name",
+    "type": "text",
+    "required": false,
+    "sample": "株式会社サンプル",
+    "priority": 10
+  },
+  {
+    "id": "old_head_office_address",
+    "label_ja": "旧本店所在地",
+    "label_en": "Former Head Office Address",
+    "type": "text",
+    "required": false,
+    "sample": "東京都千代田区丸の内一丁目1番1号",
+    "priority": 10
+  },
+  {
+    "id": "new_head_office_address",
+    "label_ja": "新本店所在地",
+    "label_en": "New Head Office Address",
+    "type": "text",
+    "required": false,
+    "sample": "東京都千代田区丸の内一丁目1番1号",
+    "priority": 10
+  },
+  {
+    "id": "purpose_of_business",
+    "label_ja": "事業の目的",
+    "label_en": "Purpose of Business",
+    "type": "textarea",
+    "required": false,
+    "sample": "ここにサンプルの詳細な説明文を入力してください。\n複数行の入力が可能です。",
+    "priority": 10
+  },
+  {
+    "id": "representative_executor_name",
+    "label_ja": "代表社員氏名",
+    "label_en": "Name of Representative Member",
+    "type": "text",
+    "required": false,
+    "sample": "山田太郎",
+    "priority": 10
+  },
+  {
+    "id": "business_executor_name",
+    "label_ja": "業務執行社員氏名",
+    "label_en": "Name of Executive Member",
+    "type": "text",
+    "required": false,
+    "sample": "山田太郎",
+    "priority": 10
+  },
+  {
+    "id": "member_name",
+    "label_ja": "社員氏名",
+    "label_en": "Name of Member",
+    "type": "text",
+    "required": false,
+    "sample": "山田太郎",
+    "priority": 10
+  },
+  {
+    "id": "liquidator_name",
+    "label_ja": "清算人氏名",
+    "label_en": "Name of Liquidator",
+    "type": "text",
+    "required": false,
+    "sample": "山田太郎",
+    "priority": 10
+  },
+  {
+    "id": "liquidation_start_date",
+    "label_ja": "清算開始日",
+    "label_en": "Liquidation Start Date",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "liquidation_end_date",
+    "label_ja": "清算結了日",
+    "label_en": "Liquidation End Date",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "foreign_company_name",
+    "label_ja": "外国会社名",
+    "label_en": "Foreign Company Name",
+    "type": "text",
+    "required": false,
+    "sample": "株式会社サンプル",
+    "priority": 10
+  },
+  {
+    "id": "country_of_origin",
+    "label_ja": "本国",
+    "label_en": "Country of Origin",
+    "type": "text",
+    "required": false,
+    "sample": "サンプルテキスト",
+    "priority": 10
+  },
+  {
+    "id": "japan_representative_name",
+    "label_ja": "日本における代表者氏名",
+    "label_en": "Name of Representative in Japan",
+    "type": "text",
+    "required": false,
+    "sample": "山田太郎",
+    "priority": 10
+  },
+  {
+    "id": "branch_office_address",
+    "label_ja": "営業所所在地",
+    "label_en": "Branch Office Address",
+    "type": "text",
+    "required": false,
+    "sample": "東京都千代田区丸の内一丁目1番1号",
+    "priority": 10
+  },
+  {
+    "id": "branch_office_opening_date",
+    "label_ja": "営業所設置日",
+    "label_en": "Branch Office Opening Date",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "branch_office_closing_date",
+    "label_ja": "営業所閉鎖日",
+    "label_en": "Branch Office Closing Date",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "registration_date",
+    "label_ja": "登記年月日",
+    "label_en": "Registration Date",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "certificate_issue_date",
+    "label_ja": "証明書発行日",
+    "label_en": "Certificate Issue Date",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "seal_impression_date",
+    "label_ja": "印鑑証明書発行日",
+    "label_en": "Seal Impression Certificate Issue Date",
+    "type": "date",
+    "required": false,
+    "sample": "2024-12-14",
+    "priority": 10
+  },
+  {
+    "id": "attorney_name",
+    "label_ja": "代理人氏名",
+    "label_en": "Name of Attorney",
+    "type": "text",
+    "required": false,
+    "sample": "山田太郎",
+    "priority": 10
+  },
+  {
+    "id": "attorney_address",
+    "label_ja": "代理人住所",
+    "label_en": "Address of Attorney",
+    "type": "text",
+    "required": false,
+    "sample": "東京都千代田区丸の内一丁目1番1号",
+    "priority": 10
+  }
+]

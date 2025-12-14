@@ -1,0 +1,633 @@
+[
+  {
+    "case_id": 1,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "financial_statements",
+      "business_report",
+      "audit_report"
+    ]
+  },
+  {
+    "case_id": 2,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "financial_statements",
+      "business_report",
+      "audit_report"
+    ]
+  },
+  {
+    "case_id": 3,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "financial_statements",
+      "business_report"
+    ]
+  },
+  {
+    "case_id": 4,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "resolution_board",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 5,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "resolution_board",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 6,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "minutes_board_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 7,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "minutes_board_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 8,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 9,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "minutes_board_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 10,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "minutes_board_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 11,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "minutes_board_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 12,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "minutes_board_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 13,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 14,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 15,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 16,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 17,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "minutes_board_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 18,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "minutes_board_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 19,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "minutes_board_meeting",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 20,
+    "document_ids": [
+      "consent_all_members",
+      "member_resignation_llc",
+      "member_join_llc",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 21,
+    "document_ids": [
+      "business_report_llc",
+      "member_resignation_llc",
+      "member_join_llc",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 22,
+    "document_ids": [
+      "business_report_llc",
+      "member_resignation_llc",
+      "member_join_llc",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 23,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "dividend_resolution",
+      "financial_statements"
+    ]
+  },
+  {
+    "case_id": 24,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "dividend_resolution",
+      "financial_statements"
+    ]
+  },
+  {
+    "case_id": 25,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "dividend_resolution",
+      "financial_statements"
+    ]
+  },
+  {
+    "case_id": 26,
+    "document_ids": [
+      "minutes_board_meeting",
+      "dividend_resolution",
+      "financial_statements"
+    ]
+  },
+  {
+    "case_id": 27,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 28,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 29,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 30,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 31,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 32,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 33,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 34,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 35,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 36,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 37,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 38,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 39,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 40,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 41,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 42,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "amended_articles",
+      "resolution_shareholders",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 43,
+    "document_ids": [
+      "consent_all_members",
+      "amended_articles",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 44,
+    "document_ids": [
+      "consent_all_members",
+      "amended_articles",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 45,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "subscription_agreement",
+      "payment_certificate",
+      "capital_increase_report",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 46,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "subscription_agreement",
+      "payment_certificate",
+      "capital_increase_report",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 47,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "subscription_agreement",
+      "payment_certificate",
+      "capital_increase_report",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 48,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "subscription_agreement",
+      "payment_certificate",
+      "capital_increase_report",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 49,
+    "document_ids": [
+      "minutes_board_meeting",
+      "subscription_agreement",
+      "payment_certificate",
+      "capital_increase_report",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 50,
+    "document_ids": [
+      "minutes_board_meeting",
+      "subscription_agreement",
+      "payment_certificate",
+      "capital_increase_report",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 51,
+    "document_ids": [
+      "consent_all_members",
+      "payment_certificate",
+      "capital_increase_report",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 52,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "creditor_notice",
+      "capital_decrease_notice",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 53,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "creditor_notice",
+      "capital_decrease_notice",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 54,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "creditor_notice",
+      "capital_decrease_notice",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 55,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "creditor_notice",
+      "capital_decrease_notice",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 56,
+    "document_ids": [
+      "minutes_regular_meeting",
+      "creditor_notice",
+      "capital_decrease_notice",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 57,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "creditor_notice",
+      "capital_decrease_notice",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 58,
+    "document_ids": [
+      "establishment_certificate",
+      "articles_incorporation",
+      "promoter_signature",
+      "payment_certificate",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "registered_seal_card"
+    ]
+  },
+  {
+    "case_id": 59,
+    "document_ids": [
+      "establishment_certificate",
+      "articles_incorporation",
+      "consent_all_members",
+      "payment_certificate",
+      "registered_seal_card"
+    ]
+  },
+  {
+    "case_id": 60,
+    "document_ids": [
+      "establishment_certificate",
+      "articles_incorporation",
+      "promoter_signature",
+      "payment_certificate",
+      "director_acceptance_letter",
+      "representative_director_acceptance_letter",
+      "registered_seal_card"
+    ]
+  },
+  {
+    "case_id": 61,
+    "document_ids": [
+      "establishment_certificate",
+      "articles_incorporation",
+      "consent_all_members",
+      "payment_certificate",
+      "registered_seal_card"
+    ]
+  },
+  {
+    "case_id": 62,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "liquidation_report",
+      "liquidation_balance_sheet",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 63,
+    "document_ids": [
+      "consent_all_members",
+      "liquidation_report",
+      "liquidation_balance_sheet",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 64,
+    "document_ids": [
+      "minutes_extraordinary_meeting",
+      "liquidation_report",
+      "liquidation_balance_sheet",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 65,
+    "document_ids": [
+      "consent_all_members",
+      "liquidation_report",
+      "liquidation_balance_sheet",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 66,
+    "document_ids": [
+      "foreign_company_certificate",
+      "foreign_company_articles",
+      "japan_representative_appointment",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 67,
+    "document_ids": [
+      "foreign_company_certificate",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 68,
+    "document_ids": [
+      "foreign_company_certificate",
+      "foreign_company_articles",
+      "certificate_registration"
+    ]
+  },
+  {
+    "case_id": 69,
+    "document_ids": [
+      "foreign_company_certificate",
+      "certificate_registration"
+    ]
+  }
+]
+

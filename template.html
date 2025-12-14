@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>書類作成フォーム</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #4CAF50;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .mode-toggle {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .mode-toggle label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 30px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #4CAF50;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(30px);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .select-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        .document-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .document-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        .document-item input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .document-item label {
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .form-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .form-section h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .form-field {
+            margin-bottom: 15px;
+        }
+
+        .form-field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-field label.required:after {
+            content: " *";
+            color: red;
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        .form-field.error input,
+        .form-field.error select {
+            border-color: #f44336;
+        }
+
+        .error-message {
+            color: #f44336;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .document-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 8px;
+        }
+
+        .document-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            background-color: #e3f2fd;
+            color: #1976d2;
+            border-radius: 12px;
+            font-size: 12px;
+            border: 1px solid #bbdefb;
+        }
+
+        .selected-docs-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+
+        .btn-secondary {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #da190b;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .message {
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        #forms-container:empty:after {
+            content: "案件または書類を選択してください";
+            display: block;
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 書類作成フォーム</h1>
+
+        <div class="header">
+            <div class="mode-toggle">
+                <label>案件選択モード</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="mode-toggle">
+                    <span class="slider"></span>
+                </label>
+                <label>手動選択モード</label>
+            </div>
+        </div>
+
+        <div id="message-area"></div>
+
+        <!-- 案件選択モード -->
+        <div id="case-mode" class="section">
+            <div class="section-title">案件を選択してください</div>
+            <div class="select-group">
+                <select id="case-select">
+                    <option value="">-- 案件を選択 --</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 手動選択モード -->
+        <div id="manual-mode" class="section hidden">
+            <div class="section-title">必要な書類を選択してください</div>
+            <div id="document-checkboxes" class="document-list"></div>
+        </div>
+
+        <!-- 選択された書類一覧 -->
+        <div id="selected-documents-section" class="section hidden">
+            <div class="section-title">選択されている書類</div>
+            <div id="selected-documents-list" class="selected-docs-container"></div>
+        </div>
+
+        <!-- 入力フォームエリア -->
+        <div class="section">
+            <div class="section-title">入力フォーム</div>
+            <div id="forms-container"></div>
+        </div>
+
+        <!-- ボタン -->
+        <div class="button-group">
+            <button class="btn-primary" onclick="submitForm()">送信</button>
+            <button class="btn-secondary" onclick="clearData()">データクリア</button>
+        </div>
+    </div>
+
+    <script>
+        // ===== データ定義 =====
+        const CASE_DATA = {{.CaseDataJSON}};
+        const ALL_DOCUMENTS = {{.DocumentsJSON}};
+        const CASE_DOCUMENTS = {{.CaseDocumentsJSON}};
+        const DOCUMENT_FIELDS = {{.DocumentFieldsJSON}};
+        const FIELDS = {{.FieldsJSON}};
+        const CONFIG = {{.ConfigJSON}};
+
+        // ===== 状態管理 =====
+        let currentMode = 'case'; // 'case' or 'manual'
+        let selectedCaseId = null;
+        let selectedDocuments = new Set();
+
+        // ===== 初期化 =====
+        function init() {
+            loadFromLocalStorage();
+            buildCaseSelector();
+            buildDocumentCheckboxes();
+            setupEventListeners();
+        }
+
+        // ===== イベントリスナー設定 =====
+        function setupEventListeners() {
+            document.getElementById('mode-toggle').addEventListener('change', toggleMode);
+            
+            // 案件選択のイベント
+            document.getElementById('case-select').addEventListener('change', onCaseChange);
+
+            // フォーム入力の自動保存
+            document.addEventListener('input', debounce(saveToLocalStorage, 500));
+        }
+
+        // ===== モード切替 =====
+        function toggleMode() {
+            const isManual = document.getElementById('mode-toggle').checked;
+            currentMode = isManual ? 'manual' : 'case';
+
+            document.getElementById('case-mode').classList.toggle('hidden', isManual);
+            document.getElementById('manual-mode').classList.toggle('hidden', !isManual);
+
+            if (isManual) {
+                // 手動モードに切り替え時、案件選択をリセット
+                selectedCaseId = null;
+                document.getElementById('case-select').value = '';
+            } else {
+                // 案件モードに切り替え時、手動選択をリセット
+                document.querySelectorAll('#document-checkboxes input[type="checkbox"]').forEach(cb => {
+                    cb.checked = false;
+                });
+            }
+
+            selectedDocuments.clear();
+            renderForms();
+        }
+
+        // ===== 案件プルダウンの構築 =====
+        function buildCaseSelector() {
+            const caseSelect = document.getElementById('case-select');
+            
+            // 案件を名前順にソート
+            const sortedCases = Object.values(CASE_DATA).sort((a, b) => {
+                return a.name.localeCompare(b.name, 'ja');
+            });
+
+            sortedCases.forEach(caseItem => {
+                const option = document.createElement('option');
+                option.value = caseItem.id;
+                option.textContent = caseItem.name;
+                caseSelect.appendChild(option);
+            });
+        }
+
+        // ===== 案件選択のイベントハンドラ =====
+        function onCaseChange(e) {
+            const caseId = parseInt(e.target.value);
+            
+            if (!caseId) {
+                selectedCaseId = null;
+                selectedDocuments.clear();
+                renderForms();
+                return;
+            }
+
+            selectedCaseId = caseId;
+            selectedDocuments.clear();
+            
+            // 選択された案件の書類を自動選択
+            const caseDoc = CASE_DOCUMENTS.find(cd => cd.case_id === caseId);
+            if (caseDoc) {
+                caseDoc.document_ids.forEach(docId => {
+                    selectedDocuments.add(docId);
+                });
+            }
+            
+            renderForms();
+        }
+
+        // ===== 手動選択モード =====
+        function buildDocumentCheckboxes() {
+            const container = document.getElementById('document-checkboxes');
+            
+            Object.values(ALL_DOCUMENTS).forEach(doc => {
+                const div = document.createElement('div');
+                div.className = 'document-item';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `doc-${doc.id}`;
+                checkbox.value = doc.id;
+                checkbox.addEventListener('change', onDocumentCheckboxChange);
+                
+                const label = document.createElement('label');
+                label.htmlFor = `doc-${doc.id}`;
+                label.textContent = doc.name_ja;
+                
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                container.appendChild(div);
+            });
+        }
+
+        function onDocumentCheckboxChange(e) {
+            const docId = e.target.value;
+            if (e.target.checked) {
+                selectedDocuments.add(docId);
+            } else {
+                selectedDocuments.delete(docId);
+            }
+            renderForms();
+        }
+
+        // ===== 選択された書類一覧の表示 =====
+        function renderSelectedDocuments() {
+            const section = document.getElementById('selected-documents-section');
+            const container = document.getElementById('selected-documents-list');
+            container.innerHTML = '';
+
+            if (selectedDocuments.size === 0) {
+                section.classList.add('hidden');
+                return;
+            }
+
+            section.classList.remove('hidden');
+
+            selectedDocuments.forEach(docId => {
+                const doc = ALL_DOCUMENTS[docId];
+                if (!doc) return;
+
+                const tag = document.createElement('span');
+                tag.className = 'document-tag';
+                tag.textContent = doc.name_ja;
+                container.appendChild(tag);
+            });
+        }
+
+        // ===== フォームレンダリング =====
+        function renderForms() {
+            // 選択された書類一覧を表示
+            renderSelectedDocuments();
+
+            const container = document.getElementById('forms-container');
+            container.innerHTML = '';
+
+            if (selectedDocuments.size === 0) {
+                return;
+            }
+
+            // フィールドをマージ（同じ名前のフィールドを統合）
+            const mergedFields = new Map();
+            
+            selectedDocuments.forEach(docId => {
+                const doc = ALL_DOCUMENTS[docId];
+                const docFields = DOCUMENT_FIELDS.find(df => df.document_id === docId);
+                
+                if (!docFields) return;
+                
+                docFields.field_ids.forEach(fieldId => {
+                    const field = FIELDS[fieldId];
+                    if (!field) return;
+                    
+                    const fieldKey = `${fieldId}`;
+                    
+                    if (!mergedFields.has(fieldKey)) {
+                        mergedFields.set(fieldKey, {
+                            id: fieldId,
+                            label: field.label_ja,
+                            type: field.type,
+                            required: field.required || false,
+                            sample: field.sample || '',
+                            priority: field.priority || 0,
+                            documents: []
+                        });
+                    }
+                    
+                    const mergedField = mergedFields.get(fieldKey);
+                    mergedField.documents.push(doc.name_ja);
+                    // フィールド定義のrequiredを使用
+                    if (field.required) {
+                        mergedField.required = true;
+                    }
+                });
+            });
+
+            // マージされたフィールドを表示
+            const section = document.createElement('div');
+            section.className = 'form-section';
+
+            const title = document.createElement('h3');
+            title.textContent = '入力項目';
+            section.appendChild(title);
+
+            // フィールドを配列に変換してpriorityでソート（降順）
+            const sortedFields = Array.from(mergedFields.entries())
+                .sort((a, b) => (b[1].priority || 0) - (a[1].priority || 0));
+
+            sortedFields.forEach(([fieldKey, field]) => {
+                const fieldDiv = document.createElement('div');
+                fieldDiv.className = 'form-field';
+                fieldDiv.dataset.fieldId = field.id;
+
+                const label = document.createElement('label');
+                label.textContent = field.label;
+                if (field.required) {
+                    label.className = 'required';
+                }
+                fieldDiv.appendChild(label);
+
+                let input;
+                if (field.type === 'textarea') {
+                    input = document.createElement('textarea');
+                    input.rows = 4;
+                    if (field.sample) {
+                        input.placeholder = field.sample;
+                    }
+                } else if (field.type === 'select') {
+                    input = document.createElement('select');
+                    // オプションは実装に応じて追加
+                } else {
+                    input = document.createElement('input');
+                    input.type = field.type;
+                    if (field.sample) {
+                        input.placeholder = field.sample;
+                    }
+                }
+
+                input.name = field.id;
+                input.dataset.required = field.required;
+                input.dataset.fieldKey = fieldKey;
+                fieldDiv.appendChild(input);
+
+                // 使用される書類のタグを表示
+                const tagsDiv = document.createElement('div');
+                tagsDiv.className = 'document-tags';
+                // 重複を削除
+                const uniqueDocs = [...new Set(field.documents)];
+                uniqueDocs.forEach(docName => {
+                    const tag = document.createElement('span');
+                    tag.className = 'document-tag';
+                    tag.textContent = docName;
+                    tagsDiv.appendChild(tag);
+                });
+                fieldDiv.appendChild(tagsDiv);
+
+                section.appendChild(fieldDiv);
+            });
+
+            container.appendChild(section);
+
+            // localStorageから値を復元
+            restoreFormValues();
+        }
+
+        // ===== バリデーション =====
+        function validateForm() {
+            let isValid = true;
+            const errors = [];
+
+            document.querySelectorAll('.form-field').forEach(fieldDiv => {
+                // 既存のエラーメッセージをクリア
+                fieldDiv.classList.remove('error');
+                const existingError = fieldDiv.querySelector('.error-message');
+                if (existingError) {
+                    existingError.remove();
+                }
+
+                const input = fieldDiv.querySelector('input, select, textarea');
+                const isRequired = input.dataset.required === 'true';
+
+                if (isRequired && !input.value.trim()) {
+                    isValid = false;
+                    fieldDiv.classList.add('error');
+                    const errorMsg = document.createElement('div');
+                    errorMsg.className = 'error-message';
+                    errorMsg.textContent = 'この項目は必須です';
+                    fieldDiv.appendChild(errorMsg);
+                    errors.push(`${fieldDiv.dataset.fieldId}は必須項目です`);
+                }
+
+                // 日付のバリデーション
+                if (input.type === 'date' && input.value) {
+                    const date = new Date(input.value);
+                    if (isNaN(date.getTime())) {
+                        isValid = false;
+                        fieldDiv.classList.add('error');
+                        const errorMsg = document.createElement('div');
+                        errorMsg.className = 'error-message';
+                        errorMsg.textContent = '正しい日付を入力してください';
+                        fieldDiv.appendChild(errorMsg);
+                    }
+                }
+
+                // 数値のバリデーション
+                if (input.type === 'number' && input.value) {
+                    if (isNaN(input.value)) {
+                        isValid = false;
+                        fieldDiv.classList.add('error');
+                        const errorMsg = document.createElement('div');
+                        errorMsg.className = 'error-message';
+                        errorMsg.textContent = '正しい数値を入力してください';
+                        fieldDiv.appendChild(errorMsg);
+                    }
+                }
+            });
+
+            return { isValid, errors };
+        }
+
+        // ===== 送信処理 =====
+        async function submitForm() {
+            const validation = validateForm();
+
+            if (!validation.isValid) {
+                showMessage('入力内容に誤りがあります。赤く表示された項目を確認してください。', 'error');
+                return;
+            }
+
+            const formData = collectFormData();
+            
+            // コンソールログが有効な場合は出力
+            if (CONFIG.app.enable_console_log) {
+                console.log('送信データ:', JSON.stringify(formData, null, 2));
+            }
+            
+            // API送信
+            if (CONFIG.api.post_url) {
+                try {
+                    const response = await fetch(CONFIG.api.post_url, {
+                        method: CONFIG.api.method || 'POST',
+                        headers: CONFIG.api.headers || { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (response.ok) {
+                        showMessage('データを送信しました', 'success');
+                    } else {
+                        showMessage(`送信エラー: ${response.status} ${response.statusText}`, 'error');
+                    }
+                } catch (error) {
+                    showMessage(`送信エラー: ${error.message}`, 'error');
+                    if (CONFIG.app.enable_console_log) {
+                        console.error('送信エラー:', error);
+                    }
+                }
+            } else {
+                // APIが設定されていない場合はコンソール出力のみ
+                showMessage('データを送信しました（コンソールを確認してください）', 'success');
+            }
+        }
+
+        function collectFormData() {
+            const data = {
+                secret: CONFIG.api.secret_key || '',
+                case_id: selectedCaseId,
+                mode: currentMode,
+                documents: []
+            };
+
+            // 入力値を収集
+            const inputValues = {};
+            document.querySelectorAll('.form-field input, .form-field select, .form-field textarea').forEach(input => {
+                inputValues[input.name] = input.value;
+            });
+
+            // 選択された書類ごとにデータを構築
+            selectedDocuments.forEach(docId => {
+                const doc = ALL_DOCUMENTS[docId];
+                const docFields = DOCUMENT_FIELDS.find(df => df.document_id === docId);
+                
+                const docData = {
+                    document_id: docId,
+                    document_name: doc.name_ja,
+                    fields: {}
+                };
+
+                // その書類に必要なフィールドの値を設定
+                if (docFields) {
+                    docFields.field_ids.forEach(fieldId => {
+                        const field = FIELDS[fieldId];
+                        if (field) {
+                            docData.fields[fieldId] = inputValues[fieldId] || '';
+                        }
+                    });
+                }
+
+                data.documents.push(docData);
+            });
+
+            return data;
+        }
+
+        // ===== メッセージ表示 =====
+        function showMessage(text, type) {
+            const messageArea = document.getElementById('message-area');
+            messageArea.innerHTML = `<div class="message ${type}">${text}</div>`;
+            
+            setTimeout(() => {
+                messageArea.innerHTML = '';
+            }, 5000);
+        }
+
+        // ===== LocalStorage =====
+        function saveToLocalStorage() {
+            const formData = {};
+            
+            document.querySelectorAll('.form-field input, .form-field select, .form-field textarea').forEach(input => {
+                if (input.value) {
+                    formData[input.name] = input.value;
+                }
+            });
+
+            const saveData = {
+                mode: currentMode,
+                caseId: selectedCaseId,
+                selectedDocs: Array.from(selectedDocuments),
+                formData: formData
+            };
+
+            localStorage.setItem('formAppData', JSON.stringify(saveData));
+        }
+
+        function loadFromLocalStorage() {
+            const saved = localStorage.getItem('formAppData');
+            if (!saved) return;
+
+            try {
+                const data = JSON.parse(saved);
+                // ここでは初期化時のロードのみ実装
+                // 必要に応じて状態を復元
+            } catch (e) {
+                console.error('LocalStorageからの読み込みエラー:', e);
+            }
+        }
+
+        function restoreFormValues() {
+            const saved = localStorage.getItem('formAppData');
+            if (!saved) return;
+
+            try {
+                const data = JSON.parse(saved);
+                if (data.formData) {
+                    Object.entries(data.formData).forEach(([name, value]) => {
+                        const input = document.querySelector(`[name="${name}"]`);
+                        if (input) {
+                            input.value = value;
+                        }
+                    });
+                }
+            } catch (e) {
+                console.error('フォーム値の復元エラー:', e);
+            }
+        }
+
+        function clearData() {
+            if (!confirm('すべてのデータをクリアしますか？')) {
+                return;
+            }
+
+            // フォームをリセット
+            document.querySelectorAll('input, select, textarea').forEach(input => {
+                if (input.type === 'checkbox') {
+                    input.checked = false;
+                } else {
+                    input.value = '';
+                }
+            });
+
+            // 状態をリセット
+            selectedCaseId = null;
+            selectedDocuments.clear();
+            
+            // 案件セレクトをリセット
+            document.getElementById('case-select').value = '';
+
+            // LocalStorageをクリア
+            localStorage.removeItem('formAppData');
+
+            // フォームを再レンダリング
+            renderForms();
+
+            showMessage('データをクリアしました', 'success');
+        }
+
+        // ===== ユーティリティ =====
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // ===== 初期化実行 =====
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
+

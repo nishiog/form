@@ -1,0 +1,16 @@
+{
+  "api": {
+    "post_url": "https://api.example.com/documents/submit",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "secret_key": "your-secret-key-here"
+  },
+  "app": {
+    "title": "書類作成フォーム",
+    "autosave_interval_ms": 500,
+    "enable_console_log": true
+  }
+}
+

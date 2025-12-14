@@ -1,0 +1,100 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build for Windows
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: Build for Windows
+        env:
+          GOOS: windows
+          GOARCH: amd64
+        run: |
+          go build -o form-builder.exe build.go
+          
+      - name: Create package directory
+        run: |
+          mkdir -p package/assets
+          mkdir -p package/output
+          cp form-builder.exe package/
+          cp template.html package/
+          cp assets/*.json package/assets/ || true
+          cp assets/config.json.example package/assets/
+          rm -f package/assets/config.json
+          cp -r docs package/ || true
+          
+      - name: Create README for package
+        run: |
+          cat > package/README.txt << 'EOF'
+          ============================================
+          書類作成フォームビルダー - Windows版
+          ============================================
+
+          このパッケージの使い方：
+
+          1. 初回セットアップ
+             - assets/config.json.example を assets/config.json にコピー
+             - config.json を編集してAPI URLとシークレットキーを設定
+
+          2. フォームの生成
+             - form-builder.exe をダブルクリック
+             - または、コマンドプロンプトで「form-builder.exe」を実行
+
+          3. 生成されたファイル
+             - output/index.html に書類作成フォームが生成されます
+             - このHTMLファイルをブラウザで開いて使用できます
+
+          詳細なマニュアル：
+          - docs/windows-manual.md を参照してください
+
+          ============================================
+          EOF
+
+      - name: Create ZIP archive
+        run: |
+          cd package
+          zip -r ../form-builder-windows.zip .
+          cd ..
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: form-builder-windows
+          path: form-builder-windows.zip
+
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: form-builder-windows.zip
+          body: |
+            ## 書類作成フォームビルダー Windows版
+            
+            ### ダウンロード
+            `form-builder-windows.zip` をダウンロードして解凍してください。
+            
+            ### 使い方
+            1. `assets/config.json.example` を `assets/config.json` にコピー
+            2. `config.json` を編集してAPI設定を行う
+            3. `form-builder.exe` を実行
+            4. `output/index.html` が生成されます
+            
+            詳細は同梱の `docs/windows-manual.md` を参照してください。
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
